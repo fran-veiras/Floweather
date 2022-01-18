@@ -30,16 +30,16 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/places`);
+  const res = await fetch(`https://floweather.vercel.app/api/places`);
   const data = await res.json();
 
   const currentWeatherRes = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=Buenos aires&appid=${process.env.API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=Buenos aires&appid=${process.env.API_KEY}&units=metric`
   );
   const currentWeather = await currentWeatherRes.json();
 
   const nextForecastRes = await fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?q=Buenos aires&appid=${process.env.API_KEY}&exclude=current,minutely,hourly,alerts&units=metric`
+    `https://api.openweathermap.org/data/2.5/forecast?q=Buenos aires&appid=${process.env.API_KEY}&exclude=current,minutely,hourly,alerts&units=metric`
   );
   const nextForecast = await nextForecastRes.json();
 
