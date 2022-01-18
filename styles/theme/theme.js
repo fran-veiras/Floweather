@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import { ContainerStyles as Container } from '../../components/chakraUi/ContainerStyles';
 import { HeadingStyles as Heading } from '../../components/chakraUi/HeadingStyles';
+import { TextStyles as Text } from '../../components/chakraUi/TextStyles';
 
 export const themeApp = extendTheme({
   colors: {
@@ -20,5 +21,6 @@ export const themeApp = extendTheme({
   components: {
     Container,
     Heading,
+    Text,
   },
 });

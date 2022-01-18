@@ -3,8 +3,8 @@ export const HeadingStyles = {
   sizes: {},
   variants: {
     brand: {
-      fontSize: '1.5rem',
-      color: 'primary',
+      fontSize: '2.5rem',
+      color: 'details',
       fontFamily: 'Spline Sans, sans-serif',
       fontWeight: 'bold',
     },
