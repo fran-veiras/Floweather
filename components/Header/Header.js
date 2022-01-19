@@ -1,8 +1,22 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
 
-export const Header = (data) => {
+export const Header = (props) => {
+  const { data } = props;
+  const route = useRouter();
+
+  const [country, setCountry] = useState('Buenos Aires');
+
+  const handlerCountry = (val) => {
+    setCountry(val);
+  };
+
+  useEffect(() => {
+    route.push(`/country/${country}`);
+  }, [country]);
+
   return (
     <Flex
       justifyContent="space-between"
@@ -29,10 +43,10 @@ export const Header = (data) => {
         width="full"
         gridGap={3}
       >
-        {data.data.map((val) => (
+        {data.map((val) => (
           <Flex key={val.id} alignItems="center" gridGap={1}>
             <HiLocationMarker />
-            <Text variant="paragraph">
+            <Text variant="paragraph" onClick={() => handlerCountry(val.city)}>
               {val.city + ',' + ' ' + val.country}
             </Text>
           </Flex>

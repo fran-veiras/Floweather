@@ -4,7 +4,6 @@ import React from 'react';
 import { DayItemForecast } from './DayItemForecast';
 
 export const NextWeather = ({ days }) => {
-  console.log(days);
   return (
     <Box
       flex="1"
