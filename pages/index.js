@@ -17,7 +17,7 @@ function Home(props) {
         rel="stylesheet"
       />
       <Container>
-        <Header data={props.data} />
+        <Header data={props.data} currentLocation={props.location} />
         <Flex my={2} gridGap={2}>
           <CurrentWeather weather={props.currentWeather} />
           <NextWeather days={days} />

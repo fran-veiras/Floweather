@@ -24,6 +24,6 @@ export async function getServerSideProps(context) {
   const nextForecast = await nextForecastRes.json();
 
   return {
-    props: { data, currentWeather, nextForecast },
+    props: { data, currentWeather, nextForecast, location },
   };
 }

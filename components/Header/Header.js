@@ -1,16 +1,23 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Fade,
+  Flex,
+  Heading,
+  Select,
+  Spinner,
+  Text,
+} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { HiLocationMarker } from 'react-icons/hi';
 
 export const Header = (props) => {
-  const { data } = props;
+  const { data, currentLocation } = props;
   const route = useRouter();
 
   const [country, setCountry] = useState('Buenos Aires');
 
-  const handlerCountry = (val) => {
-    setCountry(val);
+  const handlerCountry = (e) => {
+    setCountry(e.target.value);
   };
 
   useEffect(() => {
@@ -43,14 +50,13 @@ export const Header = (props) => {
         width="full"
         gridGap={3}
       >
-        {data.map((val) => (
-          <Flex key={val.id} alignItems="center" gridGap={1}>
-            <HiLocationMarker />
-            <Text variant="paragraph" onClick={() => handlerCountry(val.city)}>
+        <Select value={currentLocation} onChange={handlerCountry}>
+          {data.map((val) => (
+            <option key={val.city} value={val.city} variant="paragraph">
               {val.city + ',' + ' ' + val.country}
-            </Text>
-          </Flex>
-        ))}
+            </option>
+          ))}
+        </Select>
       </Flex>
     </Flex>
   );

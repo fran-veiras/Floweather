@@ -21,7 +21,7 @@ const defaultPlaces = [
   },
   {
     id: 5,
-    city: 'Cancún',
+    city: 'Cancun',
     country: 'México',
   },
 ];

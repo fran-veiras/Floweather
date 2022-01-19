@@ -23,6 +23,8 @@ export const DayItemForecast = ({ forecast, weather, day }) => {
   const d = new Date(day);
   let dayNumber = d.getDay();
 
+  console.log(weather[0].main);
+
   return (
     <>
       <Grid templateRows="repeat(1, 1fr)" templateColumns="repeat(4, 1fr)">
@@ -43,6 +45,7 @@ export const DayItemForecast = ({ forecast, weather, day }) => {
           <Text variant="paragraph">
             {weather[0].main === 'Clouds' && '☁️'}
             {weather[0].main === 'Rain' && '🌧'}
+            {weather[0].main === 'Clear' && '☀️'}
           </Text>
         </GridItem>
       </Grid>
