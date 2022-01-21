@@ -2,11 +2,15 @@
   "name": "nextjs",
   "version": "1.0.0",
   "private": true,
+  "jest": {
+    "verbose": true
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --env=jsdom"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.4",
@@ -16,10 +20,17 @@
     "next": "^12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "jsx": "react-jsx"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.10",
+    "@babel/preset-react": "^7.16.7",
+    "@testing-library/dom": "^8.11.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0"
+    "eslint-config-next": "11.1.0",
+    "jest": "^27.4.7"
   }
 }

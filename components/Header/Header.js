@@ -14,6 +14,8 @@ export const Header = (props) => {
   const { data, currentLocation } = props;
   const route = useRouter();
 
+  console.log(currentLocation);
+
   const [country, setCountry] = useState('Buenos Aires');
 
   const handlerCountry = (e) => {

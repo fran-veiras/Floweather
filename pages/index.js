@@ -28,7 +28,7 @@ function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://floweather.vercel.app/api/places`); // para usar en local http://localhost:3000/api/places sv: https://floweather.vercel.app/api/places
+  const res = await fetch(`http://localhost:3000/api/places`); // para usar en local http://localhost:3000/api/places sv: https://floweather.vercel.app/api/places
   const data = await res.json();
 
   const currentWeatherRes = await fetch(
