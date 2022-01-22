@@ -12,9 +12,7 @@ import React, { useEffect, useState } from 'react';
 
 export const Header = (props) => {
   const { data, currentLocation } = props;
-  const route = useRouter();
-
-  console.log(currentLocation);
+  const route = useRouter() || [];
 
   const [country, setCountry] = useState('Buenos Aires');
 

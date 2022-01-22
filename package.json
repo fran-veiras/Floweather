@@ -2,9 +2,6 @@
   "name": "nextjs",
   "version": "1.0.0",
   "private": true,
-  "jest": {
-    "verbose": true
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,18 +14,23 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "framer-motion": "^5.6.0",
+    "jsx": "react-jsx",
     "next": "^12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "jsx": "react-jsx"
+    "webpack": "^5.66.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.16.10",
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@testing-library/dom": "^8.11.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.4.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "jest": "^27.4.7"
