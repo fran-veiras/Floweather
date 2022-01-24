@@ -52,7 +52,12 @@ export const Header = (props) => {
       >
         <Select value={currentLocation} onChange={handlerCountry}>
           {data.map((val) => (
-            <option key={val.city} value={val.city} variant="paragraph">
+            <option
+              data-testid="selector"
+              key={val.city}
+              value={val.city}
+              variant="paragraph"
+            >
               {val.city + ',' + ' ' + val.country}
             </option>
           ))}
